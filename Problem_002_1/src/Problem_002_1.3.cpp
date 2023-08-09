@@ -1,0 +1,59 @@
+/***********************************************************************
+Bachelor of Software Engineering
+Media Design School
+Auckland
+New Zealand
+
+(c) 2023 Media Design School
+
+File Name : Problem_002_1.3.cpp
+Description : Fixed code for assignment brief Problem Set 2 question 1.3
+Author : Shikomisen (Ayoub Ahmad)
+Mail : ayoub.ahmad@mds.ac.nz
+**************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+class Person
+{
+public:
+	Person()
+	{
+		cout << "Person constructor" << endl;
+	}
+};
+
+class Employee : virtual public Person
+{
+public:
+	Employee()
+	{
+		cout << "Employee constructor" << endl;
+	}
+};
+
+class Student : virtual public Person
+{
+public:
+	Student()
+	{
+		cout << "Student constructor" << endl;
+	}
+};
+
+class Internee : public Student, public Employee
+{
+public:
+	Internee()
+	{
+		cout << "Internee constructor" << endl;
+	}
+};
+
+int main()
+{
+	Internee internee;
+	return 0;
+}
